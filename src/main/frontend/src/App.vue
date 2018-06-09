@@ -43,8 +43,12 @@
             },
             register(user) {
                 this.$http.post('participants', user)
-                    .then(response => {})
-                    .catch(response =>{});
+                    .then(response => {
+                        alert("Udało się")
+                    })
+                    .catch(response =>{
+                        alert("Nie udało się! Status: " + response.status)
+                    });
             },
             logout() {
                 this.authenticatedUsername = '';
